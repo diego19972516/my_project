@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Clasificación</title>
+</head>
+<body>
+    <h1>Resultado de Clasificación</h1>
+    <p>Clasificar X: {{ Clasificar_x }}</p>
+    <p>Clasificar Y: {{ Clasificar_y }}</p>
+    <p>Resultado final: {{ result.resultado }}</p>
+    <p>Tres distancias más cortas con etiquetas:</p>
+    <ul>
+        {% for distancia, etiqueta in result.tres_mas_cortas %}
+            <li>Distancia: {{ distancia }}, Etiqueta: {{ etiqueta }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
